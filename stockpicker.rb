@@ -2,8 +2,6 @@ stocks = [17,3,6,9,15,8,6,1,10]
 stocks2 = [5, 7, 17, 6, 9, 1]
 
 def stock_picker(prices)
-    buy_day = nil
-    sell_day = nil
     results = []
     profits = [] 
     
@@ -23,7 +21,7 @@ def stock_picker(prices)
     max_profits_array.flatten!.pop
     max_profit_days = []
     max_profit_days.push(prices.index(max_profits_array[0]), prices.index(max_profits_array[1]))
-    p max_profit_days
+    max_profit_days
 end
 
-stock_picker(stocks2)
+p stock_picker(stocks2)
