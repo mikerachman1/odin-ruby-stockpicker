@@ -6,14 +6,13 @@ def stock_picker(prices)
     results = []
     
     prices.each do |price|
-        index = 0
-        while index < (prices.length)-1 do
-            index += 1
-            profit = 0
-            #p price
-            #p prices[index]
-            profit = price - prices[index]
-            results.push([price, prices[index], profit])
+        
+        i = prices.index(price)
+        while i < (prices.length)-1 do
+            i += 1
+            #profit = 0
+            profit = price - prices[i]
+            results.push([price, prices[i], profit])
         end
     end
     p results
